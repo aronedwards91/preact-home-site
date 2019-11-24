@@ -1,0 +1,48 @@
+.grid {
+  border: 4px solid blue;
+  grid-gap: 1rem;
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 20% 56.5% 20%;
+  grid-template-rows: repeat(3, 31.6%);
+  grid-template-areas:
+    "sm1 big sm2"
+    "sm3 big sm4"
+    "sm5 big sm6";
+}
+
+@media only screen and (max-width: 600px) {
+  .parent {
+    border: 4px solid blue;
+  }
+}
+.childSm1 {
+  border: 2px solid black;
+  grid-area: sm1;
+}
+.childSm2 {
+  border: 2px solid black;
+  grid-area: sm2;
+}
+.childSm3 {
+  border: 2px solid black;
+  grid-area: sm3;
+}
+.childSm4 {
+  border: 2px solid black;
+  grid-area: sm4;
+}
+.childSm5 {
+  border: 2px solid black;
+  grid-area: sm5;
+}
+.childSm6 {
+  border: 2px solid black;
+  grid-area: sm6;
+}
+.childBG {
+  border: 2px solid green;
+  grid-area: big;
+}

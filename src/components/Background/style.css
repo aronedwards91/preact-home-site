@@ -1,3 +1,9 @@
+.bgContainer {
+    height: 0;
+}
+.svgHide {
+    height: 0;
+}
 .backgroundWater {
     position: absolute;
     background-image: url("../../assets/images/beach.png");
@@ -16,5 +22,6 @@
     left:0;
     height: 100%;
     width: 100%;
+    z-index: -20;
 }
   

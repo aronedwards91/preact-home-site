@@ -2,11 +2,11 @@ import { h } from "preact";
 import style from "./style.css";
 
 const Background = () => (
-  <div>
+  <div class={style.bgContainer}>
     <div class={style.background}>
       <div class={style.backgroundWater}></div>
     </div>
-    <svg>
+    <svg class={style.svgHide}>
       <filter id="turbulence" x="0" y="0" width="100%" height="100%">
         <feTurbulence
           id="sea-filter"

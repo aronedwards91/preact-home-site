@@ -1,8 +1,8 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
-import Header from './header';
 import Background from './Background';
+import Grid from './Grid';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
@@ -21,13 +21,13 @@ export default class App extends Component {
 	render() {
 		return (
 			<div id="app">
-				{/* <Header /> */}
 				<Background />
-				<Router onChange={this.handleRoute}>
+				<Grid />
+				{/* <Router onChange={this.handleRoute}>
 					<Home path="/" />
 					<Profile path="/profile/" user="me" />
 					<Profile path="/profile/:user" />
-				</Router>
+				</Router> */}
 			</div>
 		);
 	}
