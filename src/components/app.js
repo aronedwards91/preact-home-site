@@ -23,7 +23,6 @@ export default class App extends Component {
 			<div id="app">
 				{/* <Header /> */}
 				<Background />
-				<div>test</div>
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />
 					<Profile path="/profile/" user="me" />

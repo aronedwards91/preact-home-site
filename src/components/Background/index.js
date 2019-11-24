@@ -3,7 +3,7 @@ import style from "./style.css";
 
 const Background = () => (
   <div>
-    <div class="background">
+    <div class={style.background}>
       <div class={style.backgroundWater}></div>
     </div>
     <svg>
@@ -19,8 +19,8 @@ const Background = () => (
           xlinkHref="#sea-filter"
           attributeName="baseFrequency"
           dur="60s"
-          keyTimes="0;0.5;1"
-          values="0.02 0.06;0.04 0.08;0.02 0.06"
+          keyTimes="0;0.3;0.4;0.6;0.8;1"
+          values="0.02 0.06;0.03 0.07;0.04 0.08;0.035 0.075;0.03 0.07;0.02 0.06"
           repeatCount="indefinite"
         />
       </filter>

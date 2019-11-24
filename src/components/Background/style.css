@@ -1,11 +1,20 @@
 .backgroundWater {
     position: absolute;
-    background-image: url("../../assets/images/beach.jpg");
+    background-image: url("../../assets/images/beach.png");
     background-size: cover;
     top:0;
     left:0;
     height: 100%;
     width: 100%;
     filter: url("#turbulence");
+}
+.background {
+    position: absolute;
+    background-image: url("../../assets/images/beachbg.jpg");
+    background-size: cover;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
 }
   
