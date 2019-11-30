@@ -1,5 +1,6 @@
 import { h } from "preact";
-import style from "./style.css";
+// import style from "./style.css";
+import lessStyle from './lessStyle';
 import { useState } from "preact/hooks";
 
 const FloatBtn = () => {
@@ -7,8 +8,8 @@ const FloatBtn = () => {
   console.log("cl:", clicked);
   return (
     <div onClick={() => setClicked(!clicked)}>
-      <div class={style.button}>
-        <div class={style.button_text}>Hi</div>
+      <div class={lessStyle.button}>
+        <div class={lessStyle.button_text}>Hi</div>
       </div>
     </div>
   );
