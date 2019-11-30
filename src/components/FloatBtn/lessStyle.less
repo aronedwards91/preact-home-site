@@ -2,6 +2,7 @@
 
 .button {
     background: linear-gradient(@color-primary-2 0%,@color-primary-3 100%);
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 25px -1px @color-primary-1, inset 0 8px 20px 0 @color-primary-4;
     border-radius: 50%;
     border: 0.6vw solid @color-primary-4;
     margin: 0.5em auto 0 auto;
@@ -12,6 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 25px -1px @color-primary-4, inset 0 8px 20px 0 @color-primary-1;
+    }
 }
 .button_drop {
     padding-top: 60%;
@@ -21,4 +26,5 @@
     font-size: 2vw;
     color: @color-highlight;
     margin-bottom: -4px;
+    text-shadow: 1px 1px 3px @color-primary-4, 0 0 0 @color-primary-1, 1px 1px 4px @color-primary-4;
 }
