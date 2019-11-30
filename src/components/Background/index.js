@@ -1,12 +1,13 @@
 import { h } from "preact";
-import style from "./style.css";
+import style from "./style";
 
 const Background = () => (
   <div class={style.bgContainer}>
     <div class={style.background}>
       <div class={style.backgroundWater}></div>
     </div>
-    <svg class={style.svgHide}>
+    {!window.location.hostname.includes('0.0.0') ? (
+      <svg class={style.svgHide}>
       <filter id="turbulence" x="0" y="0" width="100%" height="100%">
         <feTurbulence
           id="sea-filter"
@@ -25,6 +26,7 @@ const Background = () => (
         />
       </filter>
     </svg>
+    ) : null}
   </div>
 );
 
