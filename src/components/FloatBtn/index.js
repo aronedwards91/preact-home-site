@@ -3,13 +3,13 @@ import { h } from "preact";
 import lessStyle from './lessStyle';
 import { useState } from "preact/hooks";
 
-const FloatBtn = () => {
+const FloatBtn = ({text}) => {
   const [clicked, setClicked] = useState(false);
   console.log("cl:", clicked);
   return (
     <div onClick={() => setClicked(!clicked)}>
       <div class={lessStyle.button}>
-        <div class={lessStyle.button_text}>Hi</div>
+        <div class={lessStyle.button_text}>{text}</div>
       </div>
     </div>
   );

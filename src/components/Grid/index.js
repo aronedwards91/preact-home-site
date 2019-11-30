@@ -3,15 +3,25 @@ import style from "./style";
 import FloatBtn from "../FloatBtn";
 
 const Grid = () => (
-  <div class={style.grid} >
+  <div class={style.grid}>
     <div class={style.childSm1}>
-      <FloatBtn />
+      <FloatBtn text="Welcome" />
     </div>
-    <div class={style.childSm2}>2</div>
-    <div class={style.childSm3}>3</div>
-    <div class={style.childSm4}>4</div>
-    <div class={style.childSm5}>5</div>
-    <div class={style.childSm6}>6</div>
+    <div class={style.childSm2}>
+      <FloatBtn text="Skills" />
+    </div>
+    <div class={style.childSm3}>
+      <FloatBtn text="Experience" />
+    </div>
+    <div class={style.childSm4}>
+      <FloatBtn text="Demo" />
+    </div>
+    <div class={style.childSm5}>
+      <FloatBtn text="Book List" />
+    </div>
+    <div class={style.childSm6}>
+      <FloatBtn text="Welcome" />
+    </div>
     <div class={style.childBG}>Big</div>
   </div>
 );
