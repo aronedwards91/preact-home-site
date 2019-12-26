@@ -3,6 +3,8 @@ import { Router } from "preact-router";
 
 import Background from "./Background";
 import Grid from "./Grid";
+import { MobileShow, MobileHide } from "./Mobile";
+import MobileBtnRow from "./MobileBtnRow";
 
 // Code-splitting is automated for routes
 import Home from "../routes/home";
@@ -21,7 +23,13 @@ export default class App extends Component {
     return (
       <div id="app">
         <Background />
-        <Grid />
+        <MobileHide style={{height: '100%'}}>
+          <Grid />
+        </MobileHide>
+        <MobileShow>
+          <MobileBtnRow />
+        </MobileShow>
+
         <link
           href="https://fonts.googleapis.com/css?family=Sulphur+Point:400,700&display=swap"
           rel="stylesheet"
