@@ -1,5 +1,6 @@
+@import "../../utils/breakpoints.less";
+
 .grid {
-  border: 2px solid blue;
   grid-gap: 1rem;
   height: 100%;
   width: 95%;
@@ -11,15 +12,16 @@
     "sm1 big sm2"
     "sm3 big sm4"
     "sm5 big sm6";
-}
 
-@media only screen and (max-width: 600px) {
-  .parent {
-    border: 4px solid blue;
+  @media only screen and (max-width: @mobile-breakpoint-max) {
+    grid-template-columns: 100%;
+    grid-template-rows: 96%;
+    grid-template-areas:
+      "big";
   }
 }
+
 .childSm1 {
-  border-bottom: 2px solid black;
   grid-area: sm1;
   overflow: hidden;
 }

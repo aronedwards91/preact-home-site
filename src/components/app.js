@@ -19,13 +19,14 @@ export default class App extends Component {
     return (
       <div id="app">
         <Background />
-        <MobileHide style={{height: '100%'}}>
+        
+        {/* <MobileHide style={{height: '100%'}}>
           <Grid />
-        </MobileHide>
+        </MobileHide> */}
         <MobileShow>
           <MobileBtnRow />
         </MobileShow>
-
+        <Grid />
         <link
           href="https://fonts.googleapis.com/css?family=Sulphur+Point:400,700&display=swap"
           rel="stylesheet"
