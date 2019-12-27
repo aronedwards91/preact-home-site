@@ -8,6 +8,7 @@ import {
   BookListBtn,
   ContactBtn
 } from "../FloatBtn";
+import MainBox from "../MainBox";
 
 const Grid = () => (
   <div class={style.grid}>
@@ -29,7 +30,9 @@ const Grid = () => (
     <div class={style.childSm6}>
       <ContactBtn />
     </div>
-    <div class={style.childBG}>Big</div>
+    <div class={style.childBG}>
+      <MainBox />
+    </div>
   </div>
 );
 

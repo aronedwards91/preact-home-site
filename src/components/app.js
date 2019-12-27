@@ -6,10 +6,6 @@ import Grid from "./Grid";
 import { MobileShow, MobileHide } from "./Mobile";
 import MobileBtnRow from "./MobileBtnRow";
 
-// Code-splitting is automated for routes
-import Home from "../routes/home";
-import Profile from "../routes/profile";
-
 export default class App extends Component {
   /** Gets fired when the route changes.
    *	@param {Object} event		"change" event from [preact-router](http://git.io/preact-router)
@@ -34,11 +30,6 @@ export default class App extends Component {
           href="https://fonts.googleapis.com/css?family=Sulphur+Point:400,700&display=swap"
           rel="stylesheet"
         />
-        {/* <Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
-				</Router> */}
       </div>
     );
   }

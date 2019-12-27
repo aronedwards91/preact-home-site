@@ -1,0 +1,8 @@
+{
+  "welcome": "/welcome",
+  "experience": "/experience",
+  "booklist": "/books",
+  "skills": "/skills",
+  "demo": "/demo",
+  "contact": "/contact"
+}
