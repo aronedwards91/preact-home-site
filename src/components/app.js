@@ -19,10 +19,6 @@ export default class App extends Component {
     return (
       <div id="app">
         <Background />
-        
-        {/* <MobileHide style={{height: '100%'}}>
-          <Grid />
-        </MobileHide> */}
         <MobileShow>
           <MobileBtnRow />
         </MobileShow>
