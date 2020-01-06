@@ -7,4 +7,11 @@
     padding: 2rem 3rem;
     background: linear-gradient(@color-primary-transparent-dark-3 10%,@color-primary-transparent-dark-4 90%);
     border: 0.5vw solid @color-primary-transparent-dark-4;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
+}
+.mainBox::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
