@@ -1,9 +1,7 @@
 export const WelcomeText = {
   title: "Welcome",
-  intro1: `Welcome to my site, thanks for stopping by.
-
+  intro1: `Welcome to my site, thanks for stopping by.\n
     I'm Aron Edwards, mostly a JS developer, currently looking at AWS & microservice architecture with the hopes of building a truly fullstack skill base, I have a lot of pet projects in mind, and I'm gonna need the skills!
-    
     I'm now working at a wonderful company called`,
   link1name: " Asset TV. ",
   link1: "https://asset.tv",

@@ -1,7 +1,11 @@
 import { h } from "preact";
-import { route } from "preact-router";
 import style from "./style";
 
-const Paragraph = ({text}) => <div class={style.Paragraph}>{text}</div>;
+const Paragraph = ({ text, children }) => (
+  <div class={style.Paragraph}>
+    {text}
+    {children}
+  </div>
+);
 
 export default Paragraph;
