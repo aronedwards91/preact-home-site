@@ -11,3 +11,18 @@ export const WelcomeText = {
   
   All the best, regards, Aron.`
 };
+export const ExperienceText = {
+  title: "Places I've Worked",
+};
+export const BooksText = {
+  title: "Books I Love",
+};
+export const ContactText = {
+  title: "How can I help?",
+};
+export const DemoText = {
+  title: "Some Project Demos",
+};
+export const SkillsText = {
+  title: "My Software Skills",
+}

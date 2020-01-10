@@ -18,7 +18,6 @@ const Welcome = () => (
       {" "}
       {WelcomeText.intro2}
     </Paragraph>
-
   </div>
 );
 
