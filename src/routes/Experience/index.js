@@ -28,6 +28,31 @@ const GeneralExperience = [
     main: `Worked on the IT Support desk supporting technology inside The McDonalds franchise restaurants.
   Dealt with Microsoft systems and customer software, issues came in from store managers calling in, would then guide them through fixing things remotely or advising them on physical actions to take.
   Built up strong tech communication skills and knowledge of production system problems.`
+  },
+  {
+    title: "Travelling & Studys",
+    subtitle: "Aug16 - May17 :: Udacity, Java, Android",
+    main: `Got van to go round Ireland, van died in Wales (long story...), ended up wandering the wonderful welsh mountainside from a lovely spot owned by family.
+    During this I did some online training to build up skills for a developer career, passed the Udacity courses; Android Basics & Intro to Java. With the final result being a basic android app built with Java.`
+  },
+  {
+    title: "Xerox",
+    subtitle:
+      "Nov12 - Aug16  :: Proprietary Software Support, Image Processing Support, Customer Communication, Problem Solving",
+    main: `Began via 3 year apprenticeship, culminating in a 4 year, Level4 in IT Software finished in early 2016. Continued working on the remote support IT desk, dealing with high volume,production printer systems.
+    Helped customers deal with User interface, system problems and debugged print ready files like PDF. Direct working with users, built up communication skills and practiced dealing with stressed and angry clients.
+    Gave insight into business process and working within large organisations.`
+  },
+  {
+    title: "Imago",
+    subtitle: "Sep10 - Jan12 :: Sales Assistant, store Maintenance",
+    main: `Looked after customer at photography studio, built skills in customer support and communication skills.`
+  },
+  {
+    title: "Buffera",
+    subtitle:
+      "Aug09 - Jul10 :: Warehouse Assistant, stock Management, Attention to detail",
+    main: `Worked in the warehouse helping a small team quickly deal with customer orders, also was tasked with setting up delivery and ensuring correct data entry under high volume.`
   }
 ];
 
