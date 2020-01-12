@@ -18,6 +18,7 @@ export const ExperienceText = {
 };
 export const BooksText = {
   title: "Books I Love",
+  nonFiction: "Non-Fiction Books",
 };
 export const ContactText = {
   title: "How can I help?",
