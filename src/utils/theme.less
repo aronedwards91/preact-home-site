@@ -5,13 +5,14 @@
     color: @color-highlight;
 }
 .fontBasic {
-    font-family: 'Sulphur Point', sans-serif;
+    .fontStyle();
     font-size: 1em;
-    color: @color-highlight;
+}
+.fontShadow {
+    .fontStyle();
+    text-shadow: 1px 1px 3px @color-primary-4, 0 0 0 @color-primary-1, 1px 1px 4px @color-primary-4;
 }
 .fontLarge {
-    font-family: 'Sulphur Point', sans-serif;
+    .fontShadow();
     font-size: 2em;
-    color: @color-highlight;
-    text-shadow: 1px 1px 3px @color-primary-4, 0 0 0 @color-primary-1, 1px 1px 4px @color-primary-4;
 }

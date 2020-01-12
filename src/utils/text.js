@@ -13,6 +13,8 @@ export const WelcomeText = {
 };
 export const ExperienceText = {
   title: "Places I've Worked",
+  subtitleSoftware: "Software Experience",
+  subtitleGeneral: "General Experience",
 };
 export const BooksText = {
   title: "Books I Love",
