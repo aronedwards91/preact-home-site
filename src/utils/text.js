@@ -28,4 +28,6 @@ export const DemoText = {
 };
 export const SkillsText = {
   title: "My Software Skills",
+  recentUse: "Software Libraries I've been using recently",
+  pastUse: "Software I've had some past experience with",
 }

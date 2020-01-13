@@ -22,6 +22,7 @@ const Books = () => (
     <div>
         <Title text={BooksText.title} />
         <PadLight />
+        <PadLight />
         <Subtitle text={BooksText.nonFiction} />
         <PadLight />
         {NonFictionBooks.map(Item => (
