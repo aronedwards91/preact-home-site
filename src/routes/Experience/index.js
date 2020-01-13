@@ -2,7 +2,7 @@ import { h } from "preact";
 import style from "./style";
 import Title, { Subtitle } from "../../components/Text/Title";
 import ListItem from "../../components/ListItem";
-import { PadLight } from "../../components/Padder";
+import { PadLight, PadLine } from "../../components/Padder";
 import { ExperienceText } from "../../utils/text";
 
 import assetTV from "../../assets/icons/Experience/ExperienceTDG.png";
@@ -17,7 +17,9 @@ const ExperienceList = [
   {
     title: "Asset TV",
     sub: "May19 - Current",
-    text: `assettv text`,
+    text: `xxWorked on the IT Support desk supporting technology inside The McDonalds franchise restaurants.
+    Dealt with Microsoft systems and customer software, issues came in from store managers calling in, would then guide them through fixing things remotely or advising them on physical actions to take.
+    Built up strong tech communication skills and knowledge of production system problems.xx`,
     icon: assetTV
   },
   {
@@ -75,21 +77,24 @@ const Experience = () => (
   <div>
     <Title text={ExperienceText.title} />
     <PadLight />
+    <PadLight />
     <Subtitle text={ExperienceText.subtitleSoftware} />
     <PadLight />
-    {ExperienceList.map(Item => (
+    {ExperienceList.map((Item, index, array) => (
       <div>
         <ListItem {...Item} />
         <PadLight />
+        {array.length !== index + 1 && <PadLine />}
       </div>
     ))}
     <PadLight />
     <Subtitle text={ExperienceText.subtitleGeneral} />
     <PadLight />
-    {GeneralExperience.map(Item => (
+    {GeneralExperience.map((Item, index, array) => (
       <div>
         <ListItem {...Item} />
         <PadLight />
+        {array.length !== index + 1 && <PadLine />}
       </div>
     ))}
   </div>
