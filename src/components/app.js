@@ -1,5 +1,11 @@
 import { h, Component } from "preact";
 import { Router } from "preact-router";
+if (process.env.NODE_ENV==='development') {
+  // Must use require here as import statements are only allowed
+  // to exist at the top of a file.
+  console.log('dev');
+  require("preact/debug");
+}
 
 import Background from "./Background";
 import Grid from "./Grid";

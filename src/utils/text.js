@@ -23,8 +23,8 @@ export const BooksText = {
 export const ContactText = {
   title: "How can I help?",
 };
-export const DemoText = {
-  title: "Some Project Demos",
+export const ProjectsText = {
+  title: "Side Projects",
 };
 export const SkillsText = {
   title: "My Software Skills",

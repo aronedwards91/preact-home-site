@@ -1,29 +1,23 @@
 import { h } from "preact";
 import style from "./style";
 import Title from "../../components/Text/Title";
-import { ContactText } from "../../utils/text";
+import { ProjectsText } from "../../utils/text";
 import { SmListItem } from "../../components/ListItem";
 import { PadLight } from "../../components/Padder";
 
 import linkedin from "../../assets/icons/contact/linkedin.png";
-import github from "../../assets/icons/contact/github.png";
 
 const ContactProps = [
   {
-    title: "Linkedin",
-    link: "https://www.linkedin.com/in/aronedwards/",
+    title: "Old Website",
+    link: "oldwebsite.netlify.com",
     icon: linkedin
-  },
-  {
-    title: "Github",
-    link: "https://github.com/aronedwards91",
-    icon: github
   }
 ];
 
 const Contact = () => (
   <div>
-    <Title text={ContactText.title} />
+    <Title text={ProjectsText.title} />
     <PadLight />
     {ContactProps.map(Item => (
       <div>

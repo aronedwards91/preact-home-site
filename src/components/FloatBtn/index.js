@@ -31,8 +31,8 @@ export const BookListBtn = () => (
 export const SkillsBtn = () => (
   <FloatBtn text="Skills" path={routes.skills} />
 );
-export const DemoBtn = () => (
-  <FloatBtn text="Demo" path={routes.demo} />
+export const ProjectBtn = () => (
+  <FloatBtn text="Projects" path={routes.project} />
 );
 export const ContactBtn = () => (
   <FloatBtn text="Contact" path={routes.contact} />

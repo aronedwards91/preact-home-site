@@ -4,7 +4,7 @@ import {
   WelcomeBtn,
   SkillsBtn,
   ExperienceBtn,
-  DemoBtn,
+  ProjectBtn,
   BookListBtn,
   ContactBtn
 } from "../FloatBtn";
@@ -14,7 +14,7 @@ const MobileBtnRow = () => (
     <WelcomeBtn />
     <SkillsBtn />
     <ExperienceBtn />
-    <DemoBtn />
+    <ProjectBtn />
     <BookListBtn />
     <ContactBtn />
   </div>

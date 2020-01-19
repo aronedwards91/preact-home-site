@@ -4,7 +4,7 @@ import {
   WelcomeBtn,
   SkillsBtn,
   ExperienceBtn,
-  DemoBtn,
+  ProjectBtn,
   BookListBtn,
   ContactBtn
 } from "../FloatBtn";
@@ -22,7 +22,7 @@ const Grid = () => (
       <ExperienceBtn />
     </div>
     <div class={style.childSm4}>
-      <DemoBtn />
+      <ProjectBtn />
     </div>
     <div class={style.childSm5}>
       <BookListBtn />

@@ -7,7 +7,7 @@ import Welcome from "../../routes/Welcome";
 import Experience from "../../routes/Experience";
 import Books from "../../routes/Books";
 import Skills from "../../routes/Skills";
-import Demo from "../../routes/Demo";
+import Project from "../../routes/Project";
 import Contact from "../../routes/Contact";
 
 const MainBox = () => (
@@ -18,7 +18,7 @@ const MainBox = () => (
       <Experience path={routes.experience} />
       <Books path={routes.booklist} />
       <Skills path={routes.skills} />
-      <Demo path={routes.demo} />
+      <Project path={routes.project} />
       <Contact path={routes.contact} />
     </Router>
   </div>
