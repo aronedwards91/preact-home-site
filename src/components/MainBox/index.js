@@ -7,7 +7,7 @@ import Welcome from "../../routes/Welcome";
 import Experience from "../../routes/Experience";
 import Books from "../../routes/Books";
 import Skills from "../../routes/Skills";
-import Project from "../../routes/Project";
+import Project from "../../routes/Projects";
 import Contact from "../../routes/Contact";
 
 const MainBox = () => (
