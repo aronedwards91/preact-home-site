@@ -1,39 +1,60 @@
 import { h } from "preact";
+import { useState } from "preact/hooks";
 import style from "./style";
 
-const ListItem = ({ icon, title, sub, text }) => (
-  <div class={style.container}>
-    {icon ? (
-      <div class={style.icon}>
-        <img src={icon} alt={`icon${title}`} class={style.iconImg} />
-      </div>
-    ) : null}
-    <div class={style.textHolder}>
-      <div class={style.textTitle}>{title}</div>
-      <div class={style.textSubtitle}>{sub}</div>
-      <div class={style.textMain}>{text}</div>
-    </div>
-  </div>
-);
-
-export const SmListItem =({ icon, title, link, text }) => {
-  let linkText = link.replace('https://www.', '');
-  linkText = linkText.replace('http://www.', '');
-  linkText = linkText.replace('www.', '');
+const ListItem = ({ icon, title, sub, text, moreText }) => {
+  const [showMore, setShowMore] = useState(false);
+  const switchShowMore = () => setShowMore(!showMore);
 
   return (
-  <div class={style.container}>
-    {icon ? (
-      <div class={style.icon}>
-        <img src={icon} alt={`icon${title}`} class={style.iconImg} />
+    <div class={style.container}>
+      {icon && (
+        <div class={style.icon}>
+          <img src={icon} alt={`icon-${title}`} class={style.iconImg} />
+        </div>
+      )}
+      <div class={style.textHolder}>
+        <div class={style.textTitle}>{title}</div>
+        <div class={style.textSubtitle}>{sub}</div>
+        <div class={style.textMain}>{text}</div>
+        {moreText && !showMore && (
+          <div onClick={switchShowMore} class={style.moreTextBtn}>
+            ...More
+          </div>
+        )}
+        {showMore && <div class={style.moreText}>{moreText}</div>}
+        {moreText && showMore && <div onClick={switchShowMore} class={style.moreTextBtn}>
+            ...Less
+          </div>
+        }
       </div>
-    ) : null}
-    <div class={style.SmTextHolder}>
-      <div class={style.textTitle}>{title}</div>
-      {link && <a class={style.link} href={link} target="_target" >{linkText}</a>}
-      {text && <div class={style.textMain}>{text}</div>}
     </div>
-  </div>
-)}
+  );
+};
+
+export const SmListItem = ({ icon, title, link, text }) => {
+  let linkText = link.replace("https://www.", "");
+  linkText = linkText.replace("http://www.", "");
+  linkText = linkText.replace("www.", "");
+
+  return (
+    <div class={style.container}>
+      {icon ? (
+        <div class={style.icon}>
+          <img src={icon} alt={`icon${title}`} class={style.iconImg} />
+        </div>
+      ) : null}
+      <div class={style.SmTextHolder}>
+        <div class={style.textTitle}>{title}</div>
+        {link && (
+          <a class={style.link} href={link} target="_target">
+            {linkText}
+          </a>
+        )}
+        {text && <div class={style.textMain}>{text}</div>}
+      </div>
+    </div>
+  );
+};
 
 export default ListItem;

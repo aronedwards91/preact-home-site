@@ -10,6 +10,7 @@ const NonFictionBooks = [
       title: "The Deluge",
       sub: "Adam Tooze",
       text: `A big ol history book`,
+      moreText: 'This is moretext',
     },
     {
       title: "A History of Britain and the British People",
