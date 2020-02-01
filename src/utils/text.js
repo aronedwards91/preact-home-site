@@ -17,7 +17,7 @@ export const ExperienceText = {
   subtitleGeneral: "General Experience",
 };
 export const BooksText = {
-  title: "Books I'd Recommend'",
+  title: "Books I'd Recommend",
   nonFiction: "Non-Fiction Books",
 };
 export const ContactText = {
