@@ -2,10 +2,20 @@ import { h } from "preact";
 import { useState } from "preact/hooks";
 import style from "./style";
 
-const ListItem = ({ icon, title, sub, text, moreText }) => {
+const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
   const [showMore, setShowMore] = useState(false);
+  const [showNoteList, setShowNoteList] = useState(false);
+  const [notesShown, setNotesShown] = useState([false]);
   const switchShowMore = () => setShowMore(!showMore);
-
+  const switchShowNoteList = () => setShowNoteList(!showNoteList);
+  const switchShowNote = index => {
+    let noteArray = notesShown.slice();
+    noteArray[index] = !notesShown[index];
+    console.log("ssn-notesShownArr:", notesShown);
+    setNotesShown(noteArray);
+  };
+  console.log("showNoteList:", showNoteList);
+  console.log("notesShownArr:", notesShown);
   return (
     <div class={style.container}>
       {icon && (
@@ -23,10 +33,37 @@ const ListItem = ({ icon, title, sub, text, moreText }) => {
           </div>
         )}
         {showMore && <div class={style.moreText}>{moreText}</div>}
-        {moreText && showMore && <div onClick={switchShowMore} class={style.moreTextBtn}>
+        {moreText && showMore && (
+          <div onClick={switchShowMore} class={style.moreTextBtn}>
             ...Less
           </div>
-        }
+        )}
+        {notes && (
+          <div class={style.notesTitle}>
+            Notes...
+            <div class={style.notesExpandIcon} onClick={switchShowNoteList}>
+              {showNoteList ? "-X-" : `-V-`}
+            </div>
+            {showNoteList && (
+              <div class={style.notesDropBox}>
+                {notes.map((note, index) => (
+                  <div class={style.noteBox}>
+                    {`${index + 1} ) ${note.title}`}
+                    <div
+                      class={style.notesExpandIcon}
+                      onClick={() => switchShowNote(index)}
+                    >
+                      {notesShown[index] ? "-X-" : `-V-`}
+                    </div>
+                    {notesShown[index] && (
+                      <div class={style.noteText}>{note.text}</div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

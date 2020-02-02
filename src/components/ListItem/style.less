@@ -20,6 +20,7 @@
 .textHolder {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .textTitle {
     font-size: 1.6em;
@@ -27,12 +28,12 @@
     .fontStyle();
 }
 .textSubtitle {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     .fontStyle();
 }
 .textMain {
-    font-size: 1.2em;
+    font-size: 0.9em;
     .fontStyle();
 }
 .moreTextBtn {
@@ -51,4 +52,42 @@
 .link {
     font-size: 1em;
     .fontStyle();
+}
+.notesTitle {
+    .fontStyle();
+    position: relative;
+    margin-top: 8px;
+    font-weight: normal;
+    letter-spacing: 0.5;
+    font-size: 1.2rem;
+}
+.notesExpandIcon {
+    .textSubtitle();
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+.notesDropBox {
+    border-left: 2px solid @color-primary-transparent-dark-3;
+    border-right: 2px solid @color-primary-transparent-dark-3;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+}
+.noteBox {
+    .textSubtitle();
+    font-size: 0.9em;
+    font-weight: bold;
+    position: relative;
+    margin: 4px 0;
+    padding-right: 28px;
+}
+.noteText {
+    .fontStyle();
+    font-weight: normal;
+    font-size: 0.8em;
+    white-space: pre-line;
+    border-left: 1px solid @color-primary-transparent-dark-3;
+    border-right: 1px solid @color-primary-transparent-dark-3;
+    padding: 4px 12px;
 }
