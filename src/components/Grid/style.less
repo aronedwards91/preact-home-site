@@ -14,10 +14,13 @@
     "sm5 big sm6";
 
   @media only screen and (max-width: @mobile-breakpoint-max) {
+    height: calc(100% - 120px);
     grid-template-columns: 100%;
-    grid-template-rows: 96%;
+    grid-template-rows: 92%;
     grid-template-areas:
-      "big";
+        "big"
+        "big"
+        "big";
   }
 }
 

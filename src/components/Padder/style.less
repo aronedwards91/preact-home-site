@@ -1,11 +1,19 @@
-@import '../../utils/palette.less';
+@import "../../utils/palette.less";
+@import "../../utils/breakpoints.less";
 
 .PadLight {
-    height: 1em;
+  height: 1em;
+  @media all and (max-width: @mobile-breakpoint-max) {
+    height: 0.4em;
+  }
 }
 .PadLine {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    height: 1px;
-    background-color: @color-primary-2;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  height: 1px;
+  background-color: @color-primary-2;
+  @media all and (max-width: @mobile-breakpoint-max) {
+    margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  }
 }

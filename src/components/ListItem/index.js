@@ -48,7 +48,9 @@ const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
               <div class={style.notesDropBox}>
                 {notes.map((note, index) => (
                   <div class={style.noteBox}>
-                    {`${index + 1} ) ${note.title}`}
+                    <div class={style.noteTitle}>{`${index + 1} ) ${
+                      note.title
+                    }`}</div>
                     <div
                       class={style.notesExpandIcon}
                       onClick={() => switchShowNote(index)}
