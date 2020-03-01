@@ -1,11 +1,13 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import style from "./style";
+import Icon from '../Icon';
 
 const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
   const [showMore, setShowMore] = useState(false);
   const [showNoteList, setShowNoteList] = useState(false);
   const [notesShown, setNotesShown] = useState([false]);
+
   const switchShowMore = () => setShowMore(!showMore);
   const switchShowNoteList = () => setShowNoteList(!showNoteList);
   const switchShowNote = index => {
@@ -42,7 +44,7 @@ const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
           <div class={style.notesTitle}>
             Notes...
             <div class={style.notesExpandIcon} onClick={switchShowNoteList}>
-              {showNoteList ? "-X-" : `-V-`}
+              {showNoteList ? (<Icon name="keyboard_arrow_up1"/>) : (<Icon />)}
             </div>
             {showNoteList && (
               <div class={style.notesDropBox}>
@@ -55,7 +57,7 @@ const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
                       class={style.notesExpandIcon}
                       onClick={() => switchShowNote(index)}
                     >
-                      {notesShown[index] ? "-X-" : `-V-`}
+                      {notesShown[index] ? (<Icon name="keyboard_arrow_up1"/>) : (<Icon />)}
                     </div>
                     {notesShown[index] && (
                       <div class={style.noteText}>{note.text}</div>
