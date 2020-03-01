@@ -1,3 +1,5 @@
+@import '../../utils/palette.less';
+
 .bgContainer {
     height: 0;
 }
@@ -34,5 +36,27 @@
     height: 100%;
     width: 100%;
     z-index: -20;
+}
+
+.switchHolder {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 4vw;
+    width: 4vw;
+    cursor: pointer;
+    z-index: 1000;
+}
+.switchBtn {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(@color-primary-transparent-2 0%,@color-primary-transparent-3 100%);
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 25px -1px @color-primary-1, inset 0 8px 20px 0 @color-primary-4;
+    border-radius: 5rem;
+    border: 0.2vw solid @color-primary-transparent-dark-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
 }
   

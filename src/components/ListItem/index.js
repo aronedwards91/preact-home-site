@@ -1,7 +1,7 @@
 import { h } from "preact";
 import { useState } from "preact/hooks";
 import style from "./style";
-import Icon from '../Icon';
+import Icon from "../Icon";
 
 const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
   const [showMore, setShowMore] = useState(false);
@@ -13,11 +13,9 @@ const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
   const switchShowNote = index => {
     let noteArray = notesShown.slice();
     noteArray[index] = !notesShown[index];
-    console.log("ssn-notesShownArr:", notesShown);
     setNotesShown(noteArray);
   };
-  console.log("showNoteList:", showNoteList);
-  console.log("notesShownArr:", notesShown);
+
   return (
     <div class={style.container}>
       {icon && (
@@ -44,7 +42,7 @@ const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
           <div class={style.notesTitle}>
             Notes...
             <div class={style.notesExpandIcon} onClick={switchShowNoteList}>
-              {showNoteList ? (<Icon name="keyboard_arrow_up1"/>) : (<Icon />)}
+              {showNoteList ? <Icon name="keyboard_arrow_up1" /> : <Icon />}
             </div>
             {showNoteList && (
               <div class={style.notesDropBox}>
@@ -57,7 +55,11 @@ const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
                       class={style.notesExpandIcon}
                       onClick={() => switchShowNote(index)}
                     >
-                      {notesShown[index] ? (<Icon name="keyboard_arrow_up1"/>) : (<Icon />)}
+                      {notesShown[index] ? (
+                        <Icon name="keyboard_arrow_up1" />
+                      ) : (
+                        <Icon />
+                      )}
                     </div>
                     {notesShown[index] && (
                       <div class={style.noteText}>{note.text}</div>

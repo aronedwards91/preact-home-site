@@ -1,15 +1,18 @@
 import { h } from "preact";
 import style from "./style";
 import { MobileShow, MobileHide } from "../Mobile";
+import Icon from "../Icon";
+import Tooltip from "../Tooltip";
+import { useState } from "preact/hooks";
 
 const Background = () => {
-  let local = false;
-  if (
-    typeof window !== "undefined" &&
-    window.location.hostname.includes("0.0.0")
-  ) {
-    local = true;
-  }
+  const [stopAnimation, setAnimation] = useState(
+    typeof window !== "undefined" && window.location.hostname.includes("0.0.0")
+  );
+  const animateBtn = () => {
+    console.log("pressed");
+    setAnimation(!stopAnimation);
+  };
 
   return (
     <div class={style.bgContainer}>
@@ -20,7 +23,8 @@ const Background = () => {
         <div class={style.background}>
           <div class={style.backgroundWater}></div>
         </div>
-        {!local ? (
+        <AnimationSwitch onPress={animateBtn} isOn={!stopAnimation} />
+        {!stopAnimation ? (
           <svg class={style.svgHide}>
             <filter id="turbulence" x="0" y="0" width="100%" height="100%">
               <feTurbulence
@@ -48,5 +52,17 @@ const Background = () => {
     </div>
   );
 };
+
+const animationText = "Turn off \n animation";
+const animationIsOffText = "Turn on \n animation";
+const AnimationSwitch = ({ onPress, isOn }) => (
+  <div class={style.switchHolder} onClick={onPress}>
+    <Tooltip text={isOn ? animationText : animationIsOffText}>
+      <div class={style.switchBtn}>
+        <Icon name="waves" />
+      </div>
+    </Tooltip>
+  </div>
+);
 
 export default Background;
