@@ -4,7 +4,7 @@ import Title, { Subtitle } from "../../components/Text/Title";
 import ListItem from "../../components/ListItem";
 import { PadLight, PadLine } from "../../components/Padder";
 import { SkillsText } from "../../utils/text";
-import {mainSkill} from './content';
+import {mainSkill, otherLib} from './content';
 
 const Skills = () => (
   <div>
@@ -22,6 +22,12 @@ const Skills = () => (
     <PadLight />
     <Subtitle text={SkillsText.pastUse} />
     <PadLight />
+    {otherLib.map(Item => (
+      <div>
+        <ListItem {...Item} />
+        <PadLine />
+      </div>
+    ))}
   </div>
 );
 
