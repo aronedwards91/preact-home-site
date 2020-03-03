@@ -247,8 +247,8 @@ export const NonFictionBooks = [
   {
     title: "The Deluge",
     sub: "Adam Tooze",
-    text: `A big ol history book`,
-    moreText: "This is moretext"
+    text: `A hefty review of the legacy of WWI`,
+    moreText: "A book that may well require two reads, but gives a powerful and in depth look into the factors that made the first world war set the stage for the second."
   },
   {
     title: "A History of Britain and the British People",

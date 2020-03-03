@@ -5,21 +5,13 @@ import { ProjectsText } from "../../utils/text";
 import { SmListItem } from "../../components/ListItem";
 import { PadLight } from "../../components/Padder";
 
-import linkedin from "../../assets/icons/contact/linkedin.png";
-
-const ContactProps = [
-  {
-    title: "Old Website",
-    link: "oldwebsite.netlify.com",
-    icon: linkedin
-  }
-];
+import {ProjectList} from './content';
 
 const Contact = () => (
   <div>
     <Title text={ProjectsText.title} />
     <PadLight />
-    {ContactProps.map(Item => (
+    {ProjectList.map(Item => (
       <div>
         <SmListItem {...Item} />
         <PadLight />

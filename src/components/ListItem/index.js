@@ -76,9 +76,12 @@ const ListItem = ({ icon, title, sub, text, moreText, notes }) => {
 };
 
 export const SmListItem = ({ icon, title, link, text }) => {
-  let linkText = link.replace("https://www.", "");
-  linkText = linkText.replace("http://www.", "");
-  linkText = linkText.replace("www.", "");
+  let linkText = null;
+  if (link) {
+    linkText = link.replace("https://www.", "");
+    linkText = linkText.replace("http://www.", "");
+    linkText = linkText.replace("www.", "");
+  }
 
   return (
     <div class={style.container}>
