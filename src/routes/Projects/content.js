@@ -1,5 +1,9 @@
 export const ProjectList = [
   {
+    title: "New Website",
+    text: "Your looking at it! Put a focus on efficiency (and a snazzy background), so went with preact, seems to go well, though undid some of it with the large background file."
+  },
+  {
     title: "User learning management app",
     link: "https://www.asset.tv",
     text: "A fast react-redux webapp with charts & beautiful ui."
